@@ -1,5 +1,6 @@
 // Initialized Variables for api keys and Seach box and button DOM Selector variables.
-let apiKey = "49ca7ad232c9bb54d934fb5e0a193820";
+//Add Your API Key to the apiKey variable
+let apiKey = " ";
 let apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 let searchbox = document.querySelector("#input");
 let searchBtn = document.querySelector(".search-btn");
