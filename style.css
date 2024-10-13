@@ -1,0 +1,364 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        /* Setting the Font for the Webpage along with margins and sizing */
+    * {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+/* Setting Viewport Background Color along with height for Desktops */
+    body {
+        height: 100vh;
+        /* background: linear-gradient(135deg, #4a5255, #dbd8d8); */
+        background: linear-gradient(135deg, rgba(254, 38, 0, 0.888), rgb(255, 221, 0));
+    }
+/* Color and font-size,alignment for the Default Home Page  */
+    .Welcome {
+        color: white;
+        text-align: center;
+        font-size: 2.7rem;
+        margin-top: 80px;
+    }
+    /* Setting Navigation bar display style to flex and flex direction along with setting background color and spacing between the elements */
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        background: #e4eaf2;
+        width: 100%;
+        justify-content: space-between;
+        position: relative;
+    }
+    /* Styles the Branding of the Webpage */
+    .branding {
+        color: black;
+        font-size: larger;
+        font-weight: 500;
+        margin: auto 50px;
+        /* margin-top:25px;
+        margin-bottom: 15px; */
+        /* flex: 1; */
+    }
+    .branding:hover {
+        cursor: pointer;
+    }
+    /* Sets the Navigation Menu Style with flex direction */
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        overflow: auto;
+        margin: 1.25rem 1.25rem;
+        flex: 1;
+    }
+    /* Styles the list elements of navigation bar */
+    .navbar li {
+        list-style: none;
+        margin: auto 1.25rem;
+    }
+    /* Styling for Navigation bar when its native,when user hovers on it, and after a user clicks on it */
+    .nav_link {
+        /* position: relative; */
+        text-decoration: none;
+        color: black;
+    }
+
+    .nav_link:hover,
+    .nav_link:focus {
+        font-weight: 500;
+    }
+    .nav_link::after {
+        content: '';
+        height: 2.7px;
+        width: 100%;
+        background: rgb(234, 87, 23);
+        display: block;
+        /* position: absolute; */
+        /* left: 0;
+        right: 0;
+        bottom: -8px; */
+        opacity: 0;
+        transition: all 0.2s;
+        pointer-events: none;
+    }
+    .nav_link:hover::after,
+    .nav_link:focus::after {
+        opacity: 1;
+    }
+    /* Styling of the search button  */
+    .search-btn {
+        position: absolute;
+        right: 1.563rem;
+        top: 50%;
+        display: flex;
+        background: none;
+        transform: translateY(-50%);
+        border: none;
+        cursor: pointer;
+    }
+    /* Search div styling */
+    .search {
+        display: flex;
+        margin: 1.25rem;
+        justify-content: flex-end;
+        /* flex: 1; */
+    }
+    /* Size of Input For Desktops */
+    #input {
+        display: flex;
+        flex-direction: r;
+        padding: 5px 15px;
+        border: 3px solid transparent;
+        padding-right: 45px;
+        background-color: white;
+        color: black;
+    }
+    /* Specs of the InfoCard  contaiting weather info.*/
+    .card {
+        height: 234px;
+        width: 90%;
+        max-width: 245px;
+        margin: 100px auto;
+        display: none;
+        /* display: flex; */
+        height: 500px;
+        width: 100%;
+        max-width: 420px;
+        /* border: 2px solid black; */
+    }
+    /* Specs for the weather image container */
+    .img-cont {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /* Specs for the data related to  teperature*/
+    .data {
+        height: 60px;
+        width: 100%;
+        max-width: 420px;
+        display: flex;
+        color: white;
+        justify-content: center;
+        font-size: 40px;
+    }
+    /* Styling for the Searched City  */
+    .City {
+        height: 60px;
+        width: 100%;
+        max-width: 420px;
+        display: flex;
+        color: white;
+        justify-content: center;
+        font-size: 40px;
+    }
+    /* Styling for Parent container for humidity and wind image */
+    .details {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        margin-top: 30px;
+        /* margin :10px 10px; */
+        font-size: 19px;
+    }
+    /* Styling for Humidity Info*/
+    .humid {
+        width: 50%;
+        /* margin:10px 20px;  */
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+    /* Styling for Wind Speed info */
+    .wind {
+        width: 50%;
+        /* margin:10px 20px;  */
+        flex-direction: column;
+        color: white;
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+    /* Styling for the span containing images for humidity and wind-speed */
+    .imgdiv1 {
+        margin-left: 0px;
+    }
+    /* Styling for image elements for humidity and wind-speed */
+    .imag {
+        width: 60px;
+        margin-right: 10px;
+    }
+    /* Styling for Error Message Triggered by JS*/
+    .error {
+        text-align: center;
+        color: white;
+        font-size: 2.5rem;
+        display: none;
+        margin-top: 10rem;
+    }
+    /* Local Time of Searched City Styling */
+    .local-time {
+        color: white;
+        text-align: end;
+        margin-top: 10px;
+        margin-right: 20px;
+        font-size: 1.2rem;
+        display: none;
+    }
+    /* Hamburger Menu being hidden for Desktop Viewport  */
+    .hamburger {
+        display: none;
+        cursor: pointer;
+    }
+    /*Styling for Bars of Hamburger Menu (Still Hidden in Desktops)*/
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3 ease-in-out;
+        background-color: black;
+    }
+    /* Styling for Parent container for Search and Hamburger menu */
+    .menu-search-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        /* Ensures hamburger and search are aligned */
+    }
+    /* Media Query for Tablets */
+    @media (max-width:1240px) {
+        .nav_link::after {
+            background: none;
+        }
+        /* Hamburger Menu activated for all viewports smaller than the breakpoint at 1240px */
+        .hamburger {
+            display: block;
+            margin-left: 1rem;
+            margin-right: -0.5rem;
+            /* margin-top:6px;
+                margin-left:5px; */
+        }
+        /* Condition For the Bars to show animation when clicked by user */
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-8px)rotate(-45deg);
+        }
+
+        .bar {
+            margin: 5px auto;
+        }
+
+        .navbar {
+            /* flex-direction: row; */
+            padding: 20px 20px;
+            padding-bottom: 10px;
+            align-items: center;
+            height: 70px;
+        }
+        /* Keeps search and hamburger elements together */
+        .menu-search-container {
+            display: flex;
+            justify-content: space-between;
+            /* Keeps space between search and hamburger */
+            width: 100%;
+            margin-right: 1rem;
+            margin-left: auto;
+            margin-top: 0px;
+            padding-top: 0px;
+        }
+
+        .search {
+            margin-left: auto;
+            /* Ensures the search bar aligns correctly */
+            margin-right: 1rem;
+            /* Adds space between search bar and hamburger */
+            position: relative;
+            display: inline-block;
+
+        }
+        /* Search Button Disappears for tablets and mobiles */
+        .search-btn {
+            display: none;
+        }
+
+        #input {
+            width: 140px;
+            display: inline-block;
+            padding: 5px 2px;
+            margin-top: 0px;
+        }
+
+        .branding {
+            display: inline-block;
+            margin: 0;
+        }
+        /* NavMenu will now appear on hamburger activation for the time being its placed on the left of viewport out of site */
+        .nav-menu {
+            position: fixed;
+            left: -105%;
+            top: 48px;
+            gap: 0;
+            flex-direction: column;
+            background-color: #e4eaf2;
+            /* background-color: red; */
+            width: 100%;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .nav-item {
+            margin: 16px 0;
+            /* border: 1px solid black; */
+            /* border-bottom: 0.5px; */
+        }
+        /* Styling to be activated when Hamburger is triggered */
+        .nav-menu.active {
+            left: -20px;
+        }
+        /* Sizing of local time font  */
+        .local-time {
+            font-size: 1rem;
+        }
+    }
+/* Media Queries for Smartphones */
+    @media (max-width:760px) {
+        body {
+            height: 120vh;
+        }
+        /* Font Size adjustment for Smartphones */
+        .Welcome {
+            font-size: 1.5rem;
+        }
+
+        #input {
+            width: 100px;
+        }
+
+        .hamburger {
+            margin-left: 0.1rem;
+            margin-right: -1rem;
+        }
+
+        .nav-menu {
+            left: -110%;
+        }
+
+        /* Sizing of local time font  */
+        .local-time {
+            font-size: 0.9rem;
+        }
+    }
+    

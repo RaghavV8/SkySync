@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Title of the Webpage -->
+    <title>SkySync</title>
+    <!-- Connection the CSS  -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Importing Google Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="branding">SkySync</div>
+        <!-- Navigation Menu -->
+        <ul class="nav-menu">
+            <li class="nav-item"><a class="nav_link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav_link" href="#">Forecast</a></li>
+            <li class="nav-item"><a class="nav_link" href="#">Live Weather</a></li>
+            <!-- Sends the User to the Google Maps Location of the Searched City  -->
+            <li class="nav-item"><a class="nav_link" href="https://maps.google.com" target="_blank" id="maps">Maps</a>
+            </li>
+            <li class="nav-item"><a class="nav_link" href="#">About Us</a></li>
+            <li class="nav-item"><a class="nav_link" href="#">Contact</a></li>
+        </ul>
+        <!-- Parent Container of search button and Hamburger menu for tablets and phones -->
+        <div class="menu-search-container">
+            <!-- Search Container -->
+            <div class="search">
+                <button class="search-btn">
+                    <span class="material-symbols-outlined">
+                        search
+                    </span>
+                </button>
+                <input type="text" name="search" id="input" placeholder="Search City ">
+            </div>
+            <!-- Hamburger Menu -->
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+    <!-- When Users Enters Wrong Name of the City -->
+    <div class="error">
+        <p>Invalid City Name !</p>
+        <p>Please Re-Enter Name</p>
+    </div>
+    <!-- Shows the Local Date & Time of the City Searched -->
+    <div class="local-time">
+        Date: DD/MM/YYYY | Local Time-18:23
+    </div>
+    <!-- Default Text for the User when he enters the Website -->
+    <div class="Welcome">
+        <p>Welcome To Weather P !</p>
+        <p>Search the Weather and Location of Your Desired City </p>
+    </div>
+    <!-- Weather Info Card -->
+    <div class="card">
+        <!-- Contains the Image showing the weather of the searched city -->
+        <div class="img-cont">
+            <img class="weather-img" src="images/clouds.png" alt="">
+        </div>
+        <!-- Contains the Temperature of the Searched City -->
+        <div class="data">
+            22&deg;c
+        </div>
+        <!-- Contains the Name of the Searched City -->
+        <div class="City">
+            New York
+        </div>
+        <div class="details">
+            <!-- Humidity Image and Value containers -->
+            <div class="humid">
+                <span class="imgdiv1">
+                    <img class="imag" src="images/humidity.png" alt="">
+                </span>
+                <p class="data1">50 %</p>
+                <p>Humidity</p>
+            </div>
+            <!-- Wind Image and Value Containers -->
+            <div class="wind">
+                <span class="imgdiv2">
+                    <img class="imag" src="images/wind.png" alt="">
+                </span>
+                <p class="data2">50 Km/h</p>
+                <p>Wind Speed</p>
+            </div>
+        </div>
+    </div>
+    <!-- Connection the Javascript part of the webpage -->
+    <script src="script.js"></script>
+</body>
+
+</html>
