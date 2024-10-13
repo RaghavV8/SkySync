@@ -17,6 +17,10 @@ async function checkWeather(city) {
     let mapslink=document.querySelector("#maps");
     mapslink.href="https://www.google.com/maps/search/'"+`${data.name}`+"'";
     
+    //Editing the Forecast NavBar Link to show Future Forecast of a City using openweather org website
+    let forecast=document.querySelector("#forec");
+    forecast.href="https://openweathermap.org/city/"+`${data.id}`;
+
     // Code Block for User Enter the Wrong City Name 
     if (response.status == 404) {
         document.querySelector(".error").style.display = "block";
