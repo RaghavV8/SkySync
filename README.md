@@ -20,6 +20,7 @@ SkySync is a user-friendly website that allows users to check the current weathe
 - **Responsive Design**: Works seamlessly on both desktop and mobile devices.
 
 ## Screenshots
+![Alt text](src/Homepage.png)
 
 
 ## Technologies Used
