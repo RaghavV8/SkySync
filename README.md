@@ -39,4 +39,4 @@ SkySync is a user-friendly website that allows users to check the current weathe
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/weather-app.git
+   git clone https://github.com/yourusername/SkySync.git
