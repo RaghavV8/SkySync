@@ -5,6 +5,13 @@ let apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 let searchbox = document.querySelector("#input");
 let searchBtn = document.querySelector(".search-btn");
 let weatherimg = document.querySelector(".weather-img");
+let branding=document.querySelector(".branding");
+
+branding.addEventListener("click",()=>{
+    // window.href="https://github.com/RaghavV8/SkySync";
+    window.open('https://github.com/RaghavV8/SkySync','_blank');
+    newTab.opener = null;
+})
 
 // Started the Asynchronus Function. 
 async function checkWeather(city) {
